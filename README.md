@@ -109,19 +109,6 @@ npm run build                # 開発中は npm run dev
 php artisan serve            # http://localhost:8000
 ```
 
-### 任意の設定（案件テキストの自動解析）
-
-`LeadParserService` は、取引先から届いた案件募集テキストを Claude API で JSON（案件名・必須スキル・単価・場所など）に変換します。使うときは `.env` に次を追加します。
-
-```
-ANTHROPIC_API_KEY=your-api-key
-ANTHROPIC_MODEL=claude-sonnet-4-6   # 省略時の値
-ANTHROPIC_MAX_TOKENS=4096
-ANTHROPIC_TIMEOUT=60
-```
-
-> 注: `LeadParseController` はまだ `routes/web.php` に登録されていないため、画面からは使えません。
-
 ## 使い方
 
 1. **ログイン**: 管理者アカウントでログインすると、ダッシュボードに案件の一覧と最新のお知らせが表示されます。
