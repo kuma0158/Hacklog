@@ -109,17 +109,6 @@ npm run build                # 開発中は npm run dev
 php artisan serve            # http://localhost:8000
 ```
 
-### デモアカウント
-
-`--seed` で次のユーザーとデモ案件 `ISSUE-1` が作られます。パスワードはすべて `password` です。**本番環境では必ず変更してください。**
-
-| メールアドレス | 名前 | 権限 |
-| --- | --- | --- |
-| admin@example.com | 管理者 | 管理者 |
-| sato@example.com | 佐藤 開発 | 一般 |
-| tanaka@example.com | 田中 PM | 一般 |
-| suzuki@example.com | 鈴木 QA | 一般 |
-
 ### 任意の設定（案件テキストの自動解析）
 
 `LeadParserService` は、取引先から届いた案件募集テキストを Claude API で JSON（案件名・必須スキル・単価・場所など）に変換します。使うときは `.env` に次を追加します。
